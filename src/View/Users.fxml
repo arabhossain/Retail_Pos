@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UsersController">
+   <children>
+          <Separator layoutX="14.0" layoutY="64.0" prefHeight="4.0" prefWidth="800.0" />
+      <Label layoutX="22.0" layoutY="37.0" text="Users " textFill="#09e823">
+         <font>
+            <Font name="Consolas Bold Italic" size="18.0" />
+         </font>
+      </Label>
+       <ListView fx:id="listUser" layoutX="14.0" layoutY="94.0" onMouseClicked="#listClicked" prefHeight="348.0" prefWidth="200.0" />
+ 
+      <Button layoutX="260.0" layoutY="82.0" mnemonicParsing="false" onAction="#btn_addUser" prefHeight="32.0" prefWidth="110.0" text="Add New User" />
+      <Button layoutX="398.0" layoutY="82.0" mnemonicParsing="false" onAction="#btn_deleteUser" prefHeight="32.0" prefWidth="110.0" text="Delete User" />
+
+      <Label layoutX="251.0" layoutY="146.0" text="Full Name" />
+      <TextField fx:id="txtFullName" layoutX="340.0" layoutY="142.0" prefHeight="25.0" prefWidth="226.0" />
+      <TextField fx:id="txtUserName" layoutX="340.0" layoutY="177.0" prefHeight="25.0" prefWidth="226.0" />
+      <Label layoutX="251.0" layoutY="181.0" text="User Name" />
+      <Label layoutX="251.0" layoutY="216.0" text="Mobile" />
+      <TextField fx:id="txtMobile" layoutX="340.0" layoutY="212.0" prefHeight="25.0" prefWidth="226.0" />
+      <Label layoutX="252.0" layoutY="252.0" text="Address" />
+      <TextArea fx:id="tAreaAddress" layoutX="340.0" layoutY="252.0" prefHeight="94.0" prefWidth="226.0" wrapText="true" />
+      <Label layoutX="251.0" layoutY="364.0" text="Role" />
+       <ComboBox fx:id="combRole" layoutX="340.0" layoutY="360.0" prefWidth="150.0" />
+        <ComboBox fx:id="combStatus" layoutX="340.0" layoutY="402.0" prefWidth="150.0" />
+      <Label layoutX="251.0" layoutY="406.0" text="Status" />
+      <Label fx:id="p0" layoutX="251.0" layoutY="481.0" text="New Password" />
+      <PasswordField fx:id="txtNewPassword" layoutX="340.0" layoutY="477.0" onKeyReleased="#checkPasswordSame" prefHeight="25.0" prefWidth="226.0" />
+      <PasswordField fx:id="txtRePassword" layoutX="340.0" layoutY="518.0" onKeyReleased="#checkPasswordSame" prefHeight="25.0" prefWidth="226.0" />
+      <Label fx:id="p1" layoutX="251.0" layoutY="522.0" text="Re-Password" />
+      <ImageView fx:id="imgUserPhoto" fitHeight="190.0" fitWidth="200.0" layoutX="582.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/nophoto.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="709.0" layoutY="349.0" mnemonicParsing="false" onAction="#btn_addPhoto" text="Add Photo" />
+      <Button fx:id="savebtn" layoutX="627.0" layoutY="476.0" mnemonicParsing="false" onAction="#btn_save" prefHeight="69.0" prefWidth="155.0" text="Save Info" />
+      
+     
+      <ImageView fx:id="imgCheckPass" fitHeight="32.0" fitWidth="32.0" layoutX="575.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/nophoto.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgIsOnline" fitHeight="32.0" fitWidth="32.0" layoutX="592.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/nophoto.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="251.0" layoutY="446.0" text="Branch" />
+      <ComboBox fx:id="combBranch" layoutX="340.0" layoutY="442.0" prefWidth="150.0" />
+     
+        </children>
+</AnchorPane>

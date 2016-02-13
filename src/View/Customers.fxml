@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersController">
+   <children>
+      <ListView fx:id="listView" layoutX="14.0" layoutY="94.0" onMouseClicked="#listClicked" prefHeight="464.0" prefWidth="226.0" />
+      <Label layoutX="14.0" layoutY="23.0" text="Customers" textFill="#b8db0d">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="49.0" prefHeight="8.0" prefWidth="655.0" />
+      <TabPane layoutX="264.0" layoutY="179.0" prefHeight="349.0" prefWidth="527.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="          Contact          ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="100.0" text="Name: " />
+                        <Label layoutX="78.0" layoutY="136.0" text="Mobile: " />
+                        <Label layoutX="78.0" layoutY="170.0" text="E-mail: " />
+                        <Label layoutX="78.0" layoutY="204.0" text="Fax: " />
+                        <TextField fx:id="txtName" layoutX="146.0" layoutY="96.0" prefHeight="25.0" prefWidth="269.0" />
+                        <TextField fx:id="txtMobile" layoutX="146.0" layoutY="132.0" prefHeight="25.0" prefWidth="226.0" />
+                        <TextField fx:id="txtEmail" layoutX="146.0" layoutY="166.0" prefHeight="25.0" prefWidth="226.0" />
+                        <TextField fx:id="txtFax" layoutX="146.0" layoutY="200.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Label layoutX="84.0" layoutY="53.0" text="ID" />
+                        <Label fx:id="lblCustomerID" layoutX="146.0" layoutY="53.0" prefHeight="17.0" prefWidth="75.0" text="cus4324">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="          Address          ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="63.0" text="House: " />
+                        <Label layoutX="23.0" layoutY="96.0" text="Road: " />
+                        <Label layoutX="23.0" layoutY="128.0" text="Block: " />
+                        <Label layoutX="22.0" layoutY="161.0" text="Section:" />
+                        <Label layoutX="27.0" layoutY="194.0" text="Area:" />
+                        <Label layoutX="30.0" layoutY="230.0" text="City: " />
+                        <TextField fx:id="txtHome" layoutX="90.0" layoutY="59.0" />
+                        <TextField fx:id="txtRoad" layoutX="90.0" layoutY="92.0" />
+                        <TextField fx:id="txtBlock" layoutX="90.0" layoutY="124.0" />
+                        <TextField fx:id="txtSection" layoutX="90.0" layoutY="157.0" />
+                        <TextField fx:id="txtArea" layoutX="90.0" layoutY="190.0" />
+                        <TextField fx:id="txtCity" layoutX="90.0" layoutY="226.0" />
+                        <Separator layoutX="250.0" layoutY="61.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Label layoutX="264.0" layoutY="63.0" text="Village Address: " underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtVillageAddress" layoutX="264.0" layoutY="90.0" prefHeight="157.0" prefWidth="242.0" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="          Photo          ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="imgCustomer" fitHeight="232.0" fitWidth="226.0" layoutX="41.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/images/Customers.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="291.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnAddPhoto" prefHeight="40.0" prefWidth="96.0" text="Add" />
+                        <Button layoutX="291.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnRemovePhoto" prefHeight="40.0" prefWidth="97.0" text="Remove" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabTransections" text="          Transactions          ">
+               <content>
+                  <TableView fx:id="tblTransection" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="136.0" text="Invoice ID" />
+                      <TableColumn prefWidth="209.0" text="Date" />
+                      <TableColumn minWidth="0.0" prefWidth="182.0" text="Amount" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ToolBar layoutX="264.0" layoutY="94.0" prefHeight="40.0" prefWidth="527.0">
+         <items>
+            <TextField fx:id="txtSearchByName" onKeyReleased="#SearchByName" promptText="Search Customer . . ." />
+            <Button mnemonicParsing="false" onAction="#btnAddNew" text="New Add" />
+            <Button mnemonicParsing="false" onAction="#btnDelete" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#btnSave" text="Save" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

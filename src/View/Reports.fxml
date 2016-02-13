@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReportsController">
+   <children>
+      <ToolBar layoutX="16.0" layoutY="82.0" orientation="VERTICAL">
+        <items>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_TopSales" prefHeight="41.0" prefWidth="103.0" text="Top Sales" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_TopCustomers" prefHeight="41.0" prefWidth="103.0" text="Top Customers" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_TopProducts" prefHeight="41.0" prefWidth="103.0" text="Top Products" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_SaleByUser" prefHeight="41.0" prefWidth="103.0" text="Sales By User" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_PriceChange" prefHeight="41.0" prefWidth="103.0" text="Price Change" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_ProductList" prefHeight="41.0" prefWidth="103.0" text="Products list" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_CustomerList" prefHeight="41.0" prefWidth="103.0" text="Customers List" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_UserList" prefHeight="41.0" prefWidth="103.0" text="Users List" />
+             <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_UserLeave" prefHeight="41.0" prefWidth="103.0" text="Users Leave" />
+        </items>
+      </ToolBar>
+      <AnchorPane fx:id="ShowPen" layoutX="137.0" layoutY="3.0" prefHeight="570.0" prefWidth="1023.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="513.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BreaksController">
+   <children>
+      <Label layoutX="18.0" layoutY="22.0" text="Breaks" textFill="#05e143">
+         <font>
+            <Font name="Constantia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="52.0" prefHeight="0.0" prefWidth="796.0" />
+      <ListView fx:id="listView" layoutX="18.0" layoutY="66.0" onMouseClicked="#listClicked" prefHeight="428.0" prefWidth="216.0" />
+      <Label layoutX="325.0" layoutY="156.0" text="Name " />
+      <TextField fx:id="txtName" layoutX="406.0" layoutY="152.0" prefHeight="3.0" prefWidth="256.0" />
+      <Label layoutX="324.0" layoutY="199.0" text="Visible " />
+      <CheckBox fx:id="cheekVisible" layoutX="406.0" layoutY="199.0" mnemonicParsing="false" />
+      <Label layoutX="329.0" layoutY="283.0" text="Note" />
+      <TextArea fx:id="txtNote" layoutX="406.0" layoutY="283.0" prefHeight="128.0" prefWidth="256.0" wrapText="true" />
+      <Button defaultButton="true" layoutX="546.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="45.0" prefWidth="107.0" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="417.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="45.0" prefWidth="107.0" text="Delete" textFill="#e80606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="282.0" layoutY="66.0" mnemonicParsing="false" onAction="#btnAddBreak" prefHeight="33.0" prefWidth="158.0" text="Add New Break Catagory">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtTime" layoutX="410.0" layoutY="232.0" prefHeight="25.0" prefWidth="107.0">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="326.0" layoutY="236.0" text="Time" />
+      <Label layoutX="534.0" layoutY="236.0" text="(In Minuts)" textFill="#37d60f">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

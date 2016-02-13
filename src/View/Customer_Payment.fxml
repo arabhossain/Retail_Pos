@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="872.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.Customer_PaymentController">
+   <children>
+      <Label layoutX="27.0" layoutY="29.0" text="Customer ID:" />
+      <TextField layoutX="107.0" layoutY="25.0" />
+      <Label layoutX="298.0" layoutY="29.0" text="Customer Name: " />
+      <TextField layoutX="398.0" layoutY="25.0" />
+      <Button layoutX="571.0" layoutY="25.0" mnemonicParsing="false" text="Search " />
+      <Label layoutX="27.0" layoutY="100.0" text="Customer ID: " />
+      <Separator layoutX="5.0" layoutY="68.0" prefHeight="3.0" prefWidth="740.0" />
+      <Label layoutX="28.0" layoutY="137.0" text="Name: " />
+      <Label layoutX="27.0" layoutY="173.0" text="Mobile : " />
+      <Label layoutX="27.0" layoutY="207.0" text="Receivable: " />
+      <Label layoutX="27.0" layoutY="248.0" text="Pay: " />
+      <Label layoutX="115.0" layoutY="100.0" text="4343kj" />
+      <Label layoutX="115.0" layoutY="137.0" text="Md. Arabb Hossain" />
+      <Label layoutX="115.0" layoutY="173.0" text="017248324324" />
+      <Label layoutX="115.0" layoutY="207.0" text="23423 [Due]" />
+      <TextField layoutX="119.0" layoutY="244.0" />
+      <Button layoutX="319.0" layoutY="279.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="193.0" text="Clear Payment" />
+   </children>
+</AnchorPane>

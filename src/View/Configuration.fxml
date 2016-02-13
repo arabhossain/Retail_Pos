@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ConfigurationController">
+   <children>
+      <TabPane layoutX="50.0" layoutY="56.0" prefHeight="357.0" prefWidth="758.0">
+        <tabs>
+          <Tab text="           General           ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="33.0" layoutY="45.0" text="Shop Name" />
+                        <TextField fx:id="txtShopName" layoutX="136.0" layoutY="41.0" prefHeight="25.0" prefWidth="234.0" />
+                        <Label layoutX="33.0" layoutY="99.0" text="Branch" />
+                        <ComboBox fx:id="comboBranchName" layoutX="136.0" layoutY="95.0" prefHeight="25.0" prefWidth="236.0" />
+                        <Label layoutX="33.0" layoutY="164.0" text="Money emotion" />
+                        <TextField fx:id="txtMoney" layoutX="136.0" layoutY="160.0" prefHeight="25.0" prefWidth="76.0" />
+                        <Button layoutX="486.0" layoutY="245.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="50.0" prefWidth="167.0" text="Save" />
+                        <Label layoutX="33.0" layoutY="216.0" text="Background Color" />
+                        <ColorPicker fx:id="choserColor" layoutX="138.0" layoutY="212.0" onMouseClicked="#colorPick" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="           Branches           ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="45.0" text="Branch Name" />
+                        <TextField fx:id="txtBranchName" layoutX="127.0" layoutY="41.0" prefHeight="25.0" prefWidth="234.0" />
+                        <TextField fx:id="txtAddressLine1" layoutX="127.0" layoutY="80.0" prefHeight="25.0" prefWidth="395.0" />
+                        <Label layoutX="14.0" layoutY="84.0" text="Address Line 1" />
+                        <Label layoutX="14.0" layoutY="121.0" text="Address Line 2" />
+                        <TextField fx:id="txtAddressLine2" layoutX="127.0" layoutY="117.0" prefHeight="25.0" prefWidth="395.0" />
+                        <ListView fx:id="listView" layoutX="563.0" layoutY="16.0" onMouseClicked="#listClicked" prefHeight="301.0" prefWidth="187.0" />
+                        <Label layoutX="14.0" layoutY="158.0" text="Head Branch" />
+                        <CheckBox fx:id="CheckHeadBrach" layoutX="127.0" layoutY="158.0" mnemonicParsing="false" />
+                        <Button layoutX="400.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnBSave" prefHeight="42.0" prefWidth="111.0" text="Save" />
+                        <Button layoutX="269.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="42.0" prefWidth="111.0" text="Delete" />
+                        <Button layoutX="138.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnAddNew" prefHeight="42.0" prefWidth="111.0" text="Add New" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="     Local Database Setup     ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="44.0" text="Database Type" />
+                        <Label layoutX="23.0" layoutY="84.0" text="Driver Class Name" />
+                        <TextField fx:id="LocalDriverClassName" layoutX="144.0" layoutY="80.0" prefHeight="25.0" prefWidth="314.0" />
+                        <Label layoutX="23.0" layoutY="122.0" text="Database URL" />
+                        <TextField fx:id="LocaldatabaseURL" layoutX="144.0" layoutY="118.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Label layoutX="23.0" layoutY="161.0" text="Database Name" />
+                        <TextField fx:id="LocalDatabaseName" layoutX="144.0" layoutY="157.0" />
+                        <Label layoutX="23.0" layoutY="202.0" text="User Name" />
+                        <TextField fx:id="LocalUserName" layoutX="144.0" layoutY="198.0" />
+                        <Label layoutX="28.0" layoutY="243.0" text="Password" />
+                        <PasswordField fx:id="LocalUserPassword" layoutX="144.0" layoutY="239.0" />
+                        <Button defaultButton="true" layoutX="549.0" layoutY="271.0" mnemonicParsing="false" onAction="#btn_LocalSave" prefHeight="43.0" prefWidth="115.0" text="Save" />
+                        <ImageView fx:id="LocalTestConnImage" fitHeight="32.0" fitWidth="32.0" layoutX="307.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/images/nophoto.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="359.0" layoutY="215.0" mnemonicParsing="false" onAction="#btn_LocalTest" text="Test" textFill="#e10303" />
+                        <ComboBox fx:id="LocalDBType" layoutX="144.0" layoutY="40.0" onMouseReleased="#DBTypeClickd" prefHeight="25.0" prefWidth="231.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="     Cloud Database Setup     ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="33.0" layoutY="36.0" text="Cloud IP " />
+                        <TextField fx:id="txtCloudIP" layoutX="136.0" layoutY="32.0" prefHeight="25.0" prefWidth="242.0" promptText="IP ie. 000.000.000.000" />
+                        <Label layoutX="33.0" layoutY="84.0" text="Server Port" />
+                        <TextField fx:id="txtServerPort" layoutX="136.0" layoutY="80.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="33.0" layoutY="132.0" text="Database Name" />
+                        <TextField fx:id="txlCloudDatabaseName" layoutX="136.0" layoutY="128.0" prefHeight="25.0" prefWidth="206.0" />
+                        <Label layoutX="33.0" layoutY="181.0" text="User Name" />
+                        <Label layoutX="33.0" layoutY="231.0" text="Password" />
+                        <PasswordField fx:id="txtCloudPassword" layoutX="136.0" layoutY="227.0" prefHeight="25.0" prefWidth="180.0" />
+                        <TextField fx:id="txtCloudUserName" layoutX="136.0" layoutY="177.0" />
+                        <Label layoutX="19.0" layoutY="290.0" text="[NB: Don't forget to add your IP at server white list. your IP address is " textFill="#cd0909" />
+                        <Label layoutX="389.0" layoutY="291.0" text="000.000.000.000" textFill="#eb3131">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="483.0" layoutY="290.0" text="]" textFill="#da3131" />
+                        <ImageView fx:id="imgCloudConnTest" fitHeight="32.0" fitWidth="32.0" layoutX="327.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/images/nophoto.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="366.0" layoutY="219.0" mnemonicParsing="false" onAction="#btn_CloudTest" text="Test Connection" />
+                        <Button defaultButton="true" layoutX="499.0" layoutY="210.0" mnemonicParsing="false" onAction="#btn_CloudSave" prefHeight="63.0" prefWidth="131.0" text="Save">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TabPane>
+      <Label layoutX="13.0" layoutY="12.0" text="Configuration" textFill="#05e114">
+         <font>
+            <Font name="Constantia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="37.0" prefHeight="0.0" prefWidth="934.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CheckInOutController">
+   <children>
+      <Button fx:id="btnIn" layoutX="358.0" layoutY="286.0" mnemonicParsing="false" onAction="#hndlebtnIn" prefHeight="61.0" prefWidth="437.0" text="In " visible="false" />
+      <GridPane fx:id="gPane" layoutX="342.0" layoutY="181.0" maxHeight="155.0" maxWidth="437.0" prefHeight="155.0" prefWidth="437.0" style="-fx-alignment: center; -fx-vgap: 10; -fx-hgap: 10;">
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Pane fx:id="paneRemaining" layoutX="801.0" layoutY="259.0" prefHeight="122.0" prefWidth="149.0" visible="false">
+         <children>
+            <Label layoutY="-21.0" text="[">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="-21.0" text="]">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="84.0" text="Remaining . . .">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRemainingTimeShowing" layoutX="37.0" layoutY="20.0" text="01">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="53.0" text="Min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneLate" layoutX="801.0" layoutY="258.0" prefHeight="122.0" prefWidth="149.0" visible="false">
+         <children>
+            <Label layoutY="-21.0" text="[" textFill="RED">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="-21.0" text="]" textFill="RED">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="84.0" text="Late Alart . . ." textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLateTimeShowing" layoutX="37.0" layoutY="20.0" text="01" textFill="RED">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="53.0" text="Min" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

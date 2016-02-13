@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Close_CashController">
+   <children>
+      <Label layoutX="14.0" layoutY="27.0" text="Close Cash" textFill="#11f018">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="61.0" prefHeight="0.0" prefWidth="717.0" />
+      <TitledPane layoutX="22.0" layoutY="146.0" prefHeight="396.0" prefWidth="611.0" text="summary" textFill="#3d11ee">
+         <content>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TableView prefHeight="350.0" prefWidth="276.0">
+                    <columns>
+                      <TableColumn prefWidth="173.0" text="Payments" />
+                      <TableColumn minWidth="8.0" prefWidth="102.0" text="Total" />
+                    </columns>
+                  </TableView>
+                  <TableView prefHeight="350.0" prefWidth="276.0">
+                     <columns>
+                        <TableColumn prefWidth="173.0" text="Tax" />
+                        <TableColumn minWidth="8.0" prefWidth="102.0" text="Total" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <Label layoutX="14.0" layoutY="81.0" text="Sequence: " />
+      <Label layoutX="86.0" layoutY="81.0" prefHeight="17.0" prefWidth="72.0" text="23" />
+      <Label layoutX="189.0" layoutY="81.0" text="Date: " />
+      <Label layoutX="234.0" layoutY="81.0" text="December 3,2015" />
+      <Label layoutX="683.0" layoutY="167.0" text="Transections: " />
+      <Label layoutX="686.0" layoutY="196.0" text="Sales: " />
+      <Label layoutX="686.0" layoutY="228.0" text="Subtotal: " />
+      <Label layoutX="684.0" layoutY="260.0" text="Texes: " />
+      <Label layoutX="685.0" layoutY="292.0" text="Cash: " />
+      <Separator layoutX="685.0" layoutY="325.0" prefWidth="200.0" />
+      <Label layoutX="771.0" layoutY="167.0" prefHeight="17.0" prefWidth="58.0" text="4" />
+      <Label layoutX="771.0" layoutY="196.0" prefHeight="17.0" prefWidth="31.0" text="3" />
+      <Label layoutX="773.0" layoutY="228.0" text="345" />
+      <Label layoutX="767.0" layoutY="260.0" text="36" />
+      <Label layoutX="768.0" layoutY="292.0" text="2345" />
+      <Label layoutX="692.0" layoutY="336.0" text="Total: ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="336.0" prefHeight="17.0" prefWidth="72.0" text="2345">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="662.0" layoutY="497.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="99.0" text="Print" />
+      <Button layoutX="780.0" layoutY="497.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="99.0" text="Close Cash" />
+   </children>
+</AnchorPane>

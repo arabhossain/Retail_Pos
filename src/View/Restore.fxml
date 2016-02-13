@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RestoreController">
+   <children>
+      <Label layoutX="257.0" layoutY="328.0" text="Your setting will be restored and few settings data will lose. " textFill="#e10606">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="572.0" layoutY="389.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="125.0" text="Restore" textFill="#e40000">
+         <font>
+            <Font name="Constantia Bold" size="14.0" />
+         </font>
+      </Button>
+      <ProgressIndicator layoutX="467.0" layoutY="397.0" prefHeight="40.0" prefWidth="41.0" />
+   </children>
+</AnchorPane>

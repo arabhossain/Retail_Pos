@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PreseceManageController">
+   <children>
+      <ToolBar layoutX="16.0" layoutY="254.0" orientation="VERTICAL">
+        <items>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_Breaks" prefHeight="41.0" prefWidth="103.0" text="Breaks" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_Leaves" prefHeight="41.0" prefWidth="103.0" text="Leaves" />
+        </items>
+      </ToolBar>
+      <AnchorPane fx:id="ShowPen" layoutX="137.0" layoutY="3.0" prefHeight="570.0" prefWidth="1023.0" />
+   </children>
+</AnchorPane>

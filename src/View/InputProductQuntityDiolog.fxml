@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="535.0" style="-fx-background-color: #ffcc99; -fx-border-color: #ff6666; -fx-border-width: 3px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InputProductQuntityDiologController">
+   <children>
+        <TextField fx:id="txtQuntity" layoutX="5.0" layoutY="140.0" onInputMethodTextChanged="#onTypeQuantity" onKeyPressed="#onTypeQuantity" onKeyReleased="#onTypeQuantity" onKeyTyped="#onTypeQuantity" prefHeight="83.0" prefWidth="210.0" text="0">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </TextField>
+      <GridPane layoutX="261.0" layoutY="139.0" prefHeight="151.0" prefWidth="147.0" style="-fx-background-color: gray; -fx-padding: 3px 10px 5px 10px; -fx-hgap: 5px;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#btn1" style="-fx-alignment: center;-fx-graphic:url('images/btn1.png');">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn2" style="-fx-graphic:url('images/btn2.png');" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn3" style="-fx-graphic:url('images/btn3.png');" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn4" style="-fx-graphic:url('images/btn4.png');" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn5" style="-fx-graphic:url('images/btn5.png');" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn6" style="-fx-graphic:url('images/btn6.png');" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn7" style="-fx-graphic:url('images/btn7.png');" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn8" style="-fx-graphic:url('images/btn8.png');" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn9" style="-fx-graphic:url('images/btn9.png');" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btnDot" style="-fx-graphic:url('images/btndot.png');" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#btn0" style="-fx-graphic:url('images/btn0.png');" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane layoutX="415.0" layoutY="19.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="53.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name" />
+            <Label text="Tax" GridPane.rowIndex="1" />
+            <Label text="Price" GridPane.rowIndex="2" />
+            <Label text="Total" GridPane.rowIndex="3" />
+            <Label fx:id="lblName" GridPane.columnIndex="1" />
+            <Label fx:id="lblTex" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblPrice" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lblTotal" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label layoutX="45.0" layoutY="35.0" text="Enter Quantity" textFill="#12b500">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+     
+      <Button defaultButton="true" layoutX="503.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnOk" prefHeight="47.0" prefWidth="104.0" text="Ok" />
+      <Button layoutX="503.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="47.0" prefWidth="104.0" text="Cancel" />
+      <Label layoutX="8.0" layoutY="226.0" onMouseClicked="#btnClear" text="Clear All" textFill="#e10000" underline="true">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="lblM" layoutX="14.0" layoutY="262.0" textFill="#f80000">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="217.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnIncrese" style="-fx-graphic:url('images/1uparrow.png');" />
+      <Button fx:id="btnDecrese" layoutX="217.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnDecrese" style="-fx-graphic:url('images/1downarrow.png');" />
+      <Button layoutX="163.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-graphic:url('images/btnback.png');" />
+   </children>
+</AnchorPane>

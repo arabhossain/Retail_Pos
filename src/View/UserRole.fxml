@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserRoleController">
+   <children>
+      <Label layoutX="16.0" layoutY="32.0" text="Roles" textFill="#01c944">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="9.0" layoutY="57.0" prefWidth="200.0" />
+      <ListView fx:id="listview" layoutX="14.0" layoutY="77.0" onMouseClicked="#listClick" prefHeight="387.0" prefWidth="190.0" />
+      <Label layoutX="271.0" layoutY="81.0" text="Role Name" />
+      <TextField fx:id="txtRoleName" layoutX="371.0" layoutY="77.0" prefHeight="25.0" prefWidth="175.0" />
+      <TitledPane layoutX="271.0" layoutY="131.0" prefHeight="303.0" prefWidth="500.0" text="Roles">
+         <content>
+            <AnchorPane prefHeight="256.0" prefWidth="498.0">
+               <children>
+                  <CheckBox fx:id="boxSales" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Sales" />
+                  <CheckBox fx:id="boxEditSales" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" text="Edit Sales" />
+                  <CheckBox fx:id="boxCustomerPayment" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" text="Customer Payments" />
+                  <CheckBox fx:id="boxExpence" layoutX="14.0" layoutY="128.0" mnemonicParsing="false" text="Expence" />
+                  <CheckBox fx:id="boxCashClose" layoutX="14.0" layoutY="156.0" mnemonicParsing="false" text="Cash Close" />
+                  <CheckBox fx:id="boxPresenceMangae" layoutX="197.0" layoutY="159.0" mnemonicParsing="false" text="Presence Manage" />
+                  <CheckBox fx:id="boxReports" layoutX="197.0" layoutY="131.0" mnemonicParsing="false" text="Reports" />
+                  <CheckBox fx:id="boxStoke" layoutX="197.0" layoutY="103.0" mnemonicParsing="false" text="Stoke" />
+                  <CheckBox fx:id="boxUsers" layoutX="197.0" layoutY="74.0" mnemonicParsing="false" text="Users" />
+                  <CheckBox fx:id="boxCustomers" layoutX="197.0" layoutY="41.0" mnemonicParsing="false" text="Customers" />
+                  <CheckBox fx:id="boxUserRole" layoutX="371.0" layoutY="139.0" mnemonicParsing="false" text="Users Role" />
+                  <CheckBox fx:id="boxTaxes" layoutX="371.0" layoutY="111.0" mnemonicParsing="false" text="Taxes" />
+                  <CheckBox fx:id="boxConfig" layoutX="371.0" layoutY="77.0" mnemonicParsing="false" text="Configuration" />
+                  <CheckBox fx:id="boxTools" layoutX="371.0" layoutY="44.0" mnemonicParsing="false" text="Tools" />
+                  <Button layoutX="160.0" layoutY="238.0" mnemonicParsing="false" onAction="#CheckAll" text="Check All" />
+                  <Button layoutX="74.0" layoutY="238.0" mnemonicParsing="false" onAction="#UncheckAll" text="Uncheck All" />
+                  <Button layoutX="10.0" layoutY="238.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="625.0" layoutY="464.0" mnemonicParsing="false" onAction="#btn_save" prefHeight="34.0" prefWidth="146.0" text="Save" />
+      <Button layoutX="456.0" layoutY="464.0" mnemonicParsing="false" onAction="#btn_delete" prefHeight="34.0" prefWidth="146.0" text="Delete" />
+      <Button layoutX="295.0" layoutY="464.0" mnemonicParsing="false" onAction="#btn_addnew" prefHeight="34.0" prefWidth="146.0" text="Add New" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.POSController">
+   <children>
+      <Separator layoutX="248.0" layoutY="66.0" prefHeight="3.0" prefWidth="765.0" />
+      <TableView fx:id="listTable" layoutX="240.0" layoutY="91.0" opacity="0.79" prefHeight="203.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="colpID" prefWidth="45.0" text="" visible="false" />
+          <TableColumn fx:id="colName" prefWidth="338.0" text="Name" />
+          <TableColumn fx:id="colQnty" prefWidth="100.0" text="Quantity" />
+          <TableColumn fx:id="colPrice" prefWidth="108.0" text="Price" />
+          <TableColumn fx:id="colTax" prefWidth="83.0" text="Tax" />
+          <TableColumn fx:id="colAmount" minWidth="0.0" prefWidth="135.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Accordion layoutX="943.0" />
+      <Label layoutX="245.0" layoutY="42.0" text="Search Products" />
+      <TextField fx:id="txtAdd" layoutX="337.0" layoutY="38.0" prefHeight="25.0" prefWidth="163.0">
+         <padding>
+            <Insets left="7.0" right="5.0" />
+         </padding></TextField>
+      <Button layoutX="517.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="25.0" prefWidth="54.0" text="Add" />
+      <Button defaultButton="true" layoutX="584.0" layoutY="38.0" mnemonicParsing="false" text="Barcode Finder" />
+      <Separator layoutX="1029.0" layoutY="64.0" prefHeight="3.0" prefWidth="328.0" />
+      <Label layoutX="1026.0" layoutY="35.0" text="Bill To" textFill="#087506">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1110.0" layoutY="42.0" text="Customer Type: " />
+      <ChoiceBox fx:id="comboCustomerType" layoutX="1205.0" layoutY="38.0" opacity="0.8" prefHeight="25.0" prefWidth="133.0" />
+      <Label layoutX="1026.0" layoutY="90.0" onMouseClicked="#cusIDClick" text="ID Number: ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <TextField fx:id="txtCusID" layoutX="1100.0" layoutY="86.0" prefHeight="25.0" prefWidth="142.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="1026.0" layoutY="128.0" text="Name: " />
+      <Label layoutX="1026.0" layoutY="164.0" text="Mobile:" />
+      <Label layoutX="1026.0" layoutY="201.0" text="Fax: " />
+      <Label layoutX="1026.0" layoutY="237.0" text="Address: " />
+      <TextArea fx:id="txtCusAddress" layoutX="1100.0" layoutY="237.0" prefHeight="66.0" prefWidth="225.0" wrapText="true" />
+      <TextField fx:id="txtCusName" layoutX="1100.0" layoutY="124.0" prefHeight="25.0" prefWidth="225.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <TextField fx:id="txtCusMobile" layoutX="1100.0" layoutY="160.0" prefHeight="25.0" prefWidth="225.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <TextField fx:id="txtCusFax" layoutX="1100.0" layoutY="197.0" prefHeight="25.0" prefWidth="225.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <Label layoutX="1026.0" layoutY="321.0" text="Balance: " />
+      <Label fx:id="lblDueBalance" layoutX="1113.0" layoutY="321.0" text=" Balance" />
+      <Label fx:id="lblcusBalance" layoutX="1100.0" layoutY="321.0" text="10" />
+      <Label layoutX="1028.0" layoutY="440.0" text="Pay ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPay" layoutX="1105.0" layoutY="440.0" onKeyReleased="#OnPayKeyRealize" prefHeight="25.0" prefWidth="176.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="7.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="1028.0" layoutY="480.0" text="Change">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblChange" layoutX="1105.0" layoutY="480.0" prefHeight="20.0" prefWidth="133.0" text="0" textFill="#d70000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="1203.0" layoutY="526.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="133.0" text="Print Invoice" textFill="#09b92c" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="4.0" layoutY="62.0" pannable="true" prefHeight="532.0" prefWidth="225.0">
+         <content>
+            <VBox fx:id="vBoxCat" prefHeight="2.0" prefWidth="224.0" style="-fx-spacing: 15; -fx-alignment: center; -fx-padding: 10px 0px 0px 0px;;" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="241.0" layoutY="393.0" prefHeight="200.0" prefWidth="765.0" style="-fx-border-color: green;" vbarPolicy="NEVER">
+         <content>
+            <GridPane fx:id="gPaneProducts" hgap="7.0" prefHeight="198.0" style="-fx-alignment: center;">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+         <padding>
+            <Insets left="10.0" />
+         </padding></ScrollPane>
+      <Label layoutX="5.0" layoutY="26.0" text="Catagories" textFill="#09d313">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="242.0" layoutY="304.0" prefHeight="80.0" prefWidth="280.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="sortViewImage" fitHeight="55.0" fitWidth="40.0" layoutX="13.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="sortViewpName" layoutX="85.0" layoutY="20.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="shortViewCartName" layoutX="87.0" layoutY="38.0" />
+            <Label fx:id="shortViewPrice" layoutX="87.0" layoutY="55.0" />
+            <Separator layoutX="66.0" layoutY="10.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="6.0" />
+            <ImageView fx:id="imgAddProduct" fitHeight="20.0" fitWidth="20.0" layoutX="260.0" layoutY="2.0" onMouseClicked="#handleimgAddProduct" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/viewmag.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblHidepID" layoutX="87.0" layoutY="12.0" visible="false" />
+         </children>
+      </Pane>
+      <Pane layoutX="726.0" layoutY="304.0" prefHeight="80.0" prefWidth="280.0" style="-fx-border-color: black;">
+         <children>
+            <Label fx:id="lblSubTotal" layoutX="84.0" layoutY="36.0" text="20" textFill="#f80000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="35.0" text="Total  : " textFill="#ee0808">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="61.0" text="Tax     :" textFill="#ee0808">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lblTotalTax" layoutX="84.0" layoutY="61.0" text="5" textFill="#f80000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="8.0" text="Items : " textFill="#ed9809">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lblItemCounts" layoutX="84.0" layoutY="9.0" textFill="#ed9809">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="btnRemoveCell" disable="true" layoutX="576.0" layoutY="319.0" mnemonicParsing="false" onAction="#btnRemove" prefHeight="38.0" prefWidth="96.0" style="-fx-background-radius: 15px; -fx-background-color: #99ff99;" styleClass="deleteCell" text="Remove Cell" />
+      <Label fx:id="lblGTotal" layoutX="1103.0" layoutY="361.0" prefHeight="20.0" prefWidth="133.0" text="0" textFill="#d70000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1026.0" layoutY="361.0" text="In Total">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCusSearch" defaultButton="true" layoutX="1255.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnHandeleSearch" prefHeight="25.0" prefWidth="65.0" text="Search" />
+      <Label layoutX="1027.0" layoutY="398.0" text="Discount">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDiscount" layoutX="1106.0" layoutY="398.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1135.0" layoutY="397.0" text="\%">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderDiscount" blockIncrement="5.0" layoutX="1157.0" layoutY="400.0" onKeyReleased="#discountKeyEvent" onMouseClicked="#handleDiscountSlider" onMouseDragged="#handleDiscountSlider" prefHeight="14.0" prefWidth="96.0" showTickLabels="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Slider>
+      <CheckBox layoutX="1265.0" layoutY="398.0" mnemonicParsing="false" text="Remember" />
+   </children>
+</AnchorPane>

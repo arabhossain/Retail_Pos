@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MaintananceController">
+   <children>
+      <AnchorPane fx:id="ShowPen" layoutX="199.0" prefHeight="500.0" prefWidth="961.0" />
+      <ToolBar layoutX="19.0" layoutY="148.0" orientation="VERTICAL">
+        <items>
+          <Button fx:id="btnUsers" mnemonicParsing="false" onAction="#btn_Users" prefHeight="45.0" prefWidth="158.0" text="Users" textFill="#f50abc">
+               <font>
+                  <Font name="Constantia Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnrole" mnemonicParsing="false" onAction="#btn_Role" prefHeight="45.0" prefWidth="158.0" text="Roles" textFill="#f50abc">
+               <font>
+                  <Font name="Constantia Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btntax" mnemonicParsing="false" onAction="#btn_Texes" prefHeight="45.0" prefWidth="158.0" text="Taxes" textFill="#f50abc">
+               <font>
+                  <Font name="Constantia Bold" size="12.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

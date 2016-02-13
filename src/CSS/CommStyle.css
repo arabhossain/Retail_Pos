@@ -1,0 +1,56 @@
+/*
+    Software Engineer
+    ---------------------------------------
+    Md. Arab Hossain
+    Email: arabhossain317@diu.edu.bd
+           green.arab1995@gmail.com
+    Mobile: +8801827-464330
+            +8801737-331037
+    Daffodil International University(Student)
+ */
+
+Button{
+    -fx-cursor: hand;
+}
+Button:hover{
+    -fx-translate-x: 1px;
+    -fx-background-color: #ccff66;
+}
+.deleteCell:hover{
+    -fx-background-color: #cccccc !important;
+    -fx-text-fill: #ff0000;
+    -fx-text-overrun: center-ellipsis;
+   
+   
+}
+.Image{
+    -fx-blend-mode: src-over !important;
+}
+TabPane{
+    -fx-background-color: #d8d8d8;
+    -fx-background-radius: 8px;
+}
+.loginBackground{
+    -fx-background-image: url("../images/a.JPG");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center; 
+}
+.dark{
+    -fx-background-color: #d8d8d8;
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+.Canvas{
+   /*
+    -fx-background-image: url("../aa.jpeg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center; 
+    */
+}
+.Menu_Slider{
+    -fx-background-color: #ebebeb;
+}
+.footer{
+    -fx-border-width: 3px;
+    -fx-border-color: #d4d7d6;
+    -fx-background-color: #ebebeb;
+}

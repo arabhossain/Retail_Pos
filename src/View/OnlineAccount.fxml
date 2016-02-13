@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="873.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.OnlineAccountController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Online Account" textFill="#0ad733">
+         <font>
+            <Font name="Constantia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="37.0" prefHeight="3.0" prefWidth="712.0" />
+      <Separator layoutX="367.0" layoutY="70.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Label layoutX="20.0" layoutY="70.0" text="Email" />
+      <TextField layoutX="81.0" layoutY="66.0" prefHeight="25.0" prefWidth="263.0" promptText="example@domin.com" />
+      <Label layoutX="21.0" layoutY="117.0" text="Password" />
+      <PasswordField layoutX="81.0" layoutY="113.0" prefHeight="25.0" prefWidth="263.0" />
+      <Button layoutX="210.0" layoutY="170.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="134.0" text="Login" />
+      <Label layoutX="21.0" layoutY="218.0" prefHeight="25.0" prefWidth="86.0" text="If login problem" />
+      <Label layoutX="111.0" layoutY="218.0" prefHeight="23.0" prefWidth="56.0" text="click here," textFill="#e40707">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="168.0" layoutY="218.0" prefHeight="25.0" prefWidth="142.0" text="For new user registration " />
+      <Label layoutX="303.0" layoutY="218.0" prefHeight="25.0" prefWidth="56.0" text="click here." textFill="RED">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="437.0" layoutY="70.0" text="Name" />
+      <TextField editable="false" layoutX="497.0" layoutY="66.0" prefHeight="25.0" prefWidth="212.0" />
+      <TextArea editable="false" layoutX="503.0" layoutY="113.0" prefHeight="218.0" prefWidth="212.0" wrapText="true" />
+      <Label layoutX="439.0" layoutY="117.0" text="Message" />
+   </children>
+</AnchorPane>

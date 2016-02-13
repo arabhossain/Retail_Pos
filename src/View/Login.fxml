@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane onMouseDragged="#btn_Drage" maxHeight="328.0" maxWidth="523.0" minHeight="291.0" minWidth="523.0" prefHeight="328.0" prefWidth="523.0" styleClass="loginBackground" stylesheets="@../CSS/CommStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+ 
+    <children>
+      <Label layoutX="101.0" layoutY="120.0" text="User Name" />
+      <Label layoutX="101.0" layoutY="159.0" text="User Password" />
+      <TextField fx:id="txt_User" layoutX="186.0" layoutY="116.0" onKeyReleased="#UserNameKeyReleased" prefHeight="25.0" prefWidth="220.0" />
+      <PasswordField fx:id="txt_pass" layoutX="186.0" layoutY="155.0" onKeyReleased="#UserNameKeyReleased" prefHeight="25.0" prefWidth="220.0" />
+      <Button layoutX="354.0" layoutY="200.0" mnemonicParsing="false" onAction="#btn_Login" style="-fx-graphic:url('images/login.png'); -fx-graphic-text-gap : 10;" text="Login" />
+      <Label fx:id="lblMessege" layoutX="25.0" layoutY="262.0"  prefHeight="47.0" prefWidth="478.0" textFill="#dd0505">
+         <font>
+            <Font name="Constantia Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="465.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn_Exit" style="-fx-graphic:url('images/exit.png'); -fx-graphic-text-gap : 10;" />
+     
+   </children>
+</Pane>

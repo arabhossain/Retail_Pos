@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StokeController">
+   <children>
+      <ToolBar layoutX="16.0" layoutY="178.0" orientation="VERTICAL" prefHeight="199.0" prefWidth="118.0">
+        <items>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_Products" prefHeight="41.0" prefWidth="103.0" text="Products" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_Categories" prefHeight="41.0" prefWidth="103.0" text="Categories" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_units" prefHeight="41.0" prefWidth="103.0" text="Units" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#btn_Survay" prefHeight="41.0" prefWidth="103.0" text="Survay" />
+        </items>
+      </ToolBar>
+      <AnchorPane fx:id="ShowPen" layoutX="137.0" layoutY="3.0" prefHeight="570.0" prefWidth="1023.0" />
+   </children>
+</AnchorPane>

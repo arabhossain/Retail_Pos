@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="977.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.Edit_SalesController">
+   <children>
+      <HBox spacing="2.0">
+         <children>
+            <Label text="Invoice No: " />
+            <TextField />
+            <Label text="Date: ">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker />
+            <Label text="Sales User: ">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <ChoiceBox prefWidth="150.0" />
+            <Button mnemonicParsing="false" text="Search ">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" top="15.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="3.0" layoutY="45.0" prefHeight="17.0" prefWidth="749.0" />
+      <HBox alignment="BASELINE_CENTER" layoutY="54.0" prefHeight="56.0" prefWidth="749.0" spacing="2.0">
+         <children>
+            <Label text="Invoice No: " />
+            <Label text="567" textFill="#32e80e" />
+            <Button mnemonicParsing="false" text="Edit Sale">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Print">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Save">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <ListView layoutX="14.0" layoutY="94.0" prefHeight="380.0" prefWidth="219.0" />
+      <TitledPane layoutX="240.0" layoutY="94.0" prefHeight="262.0" prefWidth="714.0" text="Product Items">
+         <content>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </content>
+      </TitledPane>
+      <Label graphicTextGap="5.0" layoutX="485.0" layoutY="431.0" text="Texes: " textFill="#e40303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="5.0" layoutX="536.0" layoutY="431.0" text="654" textFill="#e40303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="5.0" layoutX="634.0" layoutY="431.0" text="Total: " textFill="#e40303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="5.0" layoutX="679.0" layoutY="431.0" text="3456" textFill="#e40303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="240.0" layoutY="374.0" prefWidth="150.0" />
+      <TextField layoutX="579.0" layoutY="374.0" promptText="Quantity" />
+      <TextField layoutX="749.0" layoutY="374.0" promptText="Price" />
+      <Button layoutX="917.0" layoutY="374.0" mnemonicParsing="false" text="Edit" />
+      <TextField layoutX="411.0" layoutY="374.0" promptText="Name" />
+   </children>
+</AnchorPane>

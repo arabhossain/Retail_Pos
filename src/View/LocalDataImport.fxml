@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LocalDataImportController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Database import" textFill="#07eb21">
+         <font>
+            <Font name="Constantia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="36.0" prefHeight="7.0" prefWidth="668.0" />
+      <Label layoutX="40.0" layoutY="101.0" text="File URL" />
+      <TextField fx:id="url" layoutX="104.0" layoutY="97.0" prefHeight="25.0" prefWidth="455.0" promptText="Example: C:\\example.sql" />
+      <Button layoutX="507.0" layoutY="136.0" mnemonicParsing="false" onAction="#btnBrowse" text="Browse" />
+      <Button layoutX="403.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnImport" prefHeight="65.0" prefWidth="158.0" text="Import" />
+      <ProgressBar fx:id="progrs" layoutX="104.0" layoutY="292.0" prefHeight="49.0" prefWidth="275.0" />
+      <Label layoutX="23.0" layoutY="292.0" prefHeight="49.0" prefWidth="77.0" text="Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

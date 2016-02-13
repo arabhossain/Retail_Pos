@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProductsController">
+   <children>
+      <Label layoutX="10.0" layoutY="29.0" text="Products" textFill="#0de835">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="66.0" prefHeight="2.0" prefWidth="968.0" />
+      <ListView fx:id="listView" layoutX="14.0" layoutY="143.0" onMouseClicked="#listClicked" />
+      <TextField fx:id="txtSearchByName" onKeyReleased="#SearchByName"  layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="194.0" promptText="Search by Name . . ." />
+      <ComboBox fx:id="comboSearchByCat" layoutX="218.0" layoutY="90.0" onMouseClicked="#SearchByPCat" promptText="Sort by Categories" />
+      <Label layoutX="300.0" layoutY="231.0" text="Name" />
+      <TextField fx:id="txtName" layoutX="393.0" layoutY="227.0" prefHeight="25.0" prefWidth="248.0" />
+      <Label layoutX="301.0" layoutY="269.0" text="Categories" />
+      <ChoiceBox fx:id="comboCat" layoutX="393.0" layoutY="265.0" prefWidth="150.0" />
+      <TextField fx:id="txt_pID" layoutX="393.0" layoutY="151.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="301.0" layoutY="155.0" text="ID " />
+      <TextField fx:id="txtBarcode" layoutX="393.0" layoutY="189.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="301.0" layoutY="193.0" text="Barcode" />
+      <Button layoutX="563.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnRreadCode" prefHeight="25.0" prefWidth="76.0" text="Read Code" />
+      <Label layoutX="302.0" layoutY="306.0" text="Tax Categories" />
+      <ChoiceBox fx:id="comboTax" layoutX="393.0" layoutY="302.0" prefWidth="150.0" />
+      <Label layoutX="302.0" layoutY="383.0" text="Sale Price" />
+      <TextField fx:id="txtSalePrice" layoutX="394.0" layoutY="379.0" onKeyReleased="#getTotalPrice" />
+      <Label layoutX="301.0" layoutY="419.0" text="Total Price" />
+      <Label fx:id="lblTotalPrice" layoutX="396.0" layoutY="419.0" text="Tax + Sell Price" />
+      <ImageView fx:id="photoProduct" fitHeight="205.0" fitWidth="194.0" layoutX="768.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/productes.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="848.0" layoutY="367.0" mnemonicParsing="false" onAction="#btnAddPhoto" prefHeight="35.0" prefWidth="100.0" text="Add Photo" />
+      <Button defaultButton="true" layoutX="774.0" layoutY="477.0" mnemonicParsing="false" onAction="#btnSaveInfo" prefHeight="66.0" prefWidth="187.0" text="Save Info">
+         <font>
+            <Font name="Constantia Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="639.0" layoutY="90.0" mnemonicParsing="false" onAction="#btnAddNewProduct" text="New Product" textFill="#dd0909">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="304.0" layoutY="455.0" text="Visible" />
+      <CheckBox fx:id="checkVisible" layoutX="387.0" layoutY="455.0" mnemonicParsing="false" />
+      <ChoiceBox fx:id="comboUnit" layoutX="391.0" layoutY="340.0" prefWidth="150.0" />
+      <Label layoutX="300.0" layoutY="344.0" text="Unit" />
+      <Button layoutX="758.0" layoutY="90.0" mnemonicParsing="false" onAction="#btnDeleteProduct" text="Delete Product" textFill="#dd0909">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblMoneySymble" layoutX="549.0" layoutY="383.0" text="tk">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="367.0" layoutY="90.0" mnemonicParsing="false" onAction="#btnFindByBarcode" text="Barcode" />
+      <ProgressBar fx:id="progsFindbyBarcode" blendMode="GREEN" layoutX="432.0" layoutY="92.0" mouseTransparent="true" prefHeight="25.0" prefWidth="90.0">
+         <effect>
+            <GaussianBlur radius="31.24" />
+         </effect></ProgressBar>
+   </children>
+</AnchorPane>

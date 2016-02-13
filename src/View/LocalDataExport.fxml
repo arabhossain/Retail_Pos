@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="604.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.LocalDataExportController">
+   <children>
+      <Label layoutX="253.0" layoutY="273.0" text="Export Type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" onAction="#saave"  layoutX="375.0" layoutY="216.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="215.0" text="Download Only Database Stucture" textFill="#c313a2" />
+      <Button defaultButton="true" layoutX="375.0" layoutY="295.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="215.0" text="Download Database with Data" />
+      <Label layoutX="14.0" layoutY="37.0" text="Local Data Export" textFill="#06f215">
+         <font>
+            <Font name="Constantia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="62.0" prefHeight="0.0" prefWidth="693.0" />
+   </children>
+</AnchorPane>
